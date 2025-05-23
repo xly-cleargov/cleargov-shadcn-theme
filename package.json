@@ -1,12 +1,24 @@
 {
-  "name": "my-v0-project",
+  "name": "@cleargov/shadcn-theme",
   "version": "0.1.0",
-  "private": true,
+  "description": "A professional blue theme for shadcn/ui components, perfect for government and enterprise applications",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "styles",
+    "components.json",
+    "tailwind.config.ts"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:lib": "tsup",
+    "prepublishOnly": "pnpm build:lib"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -65,6 +77,30 @@
     "@types/react-dom": "^19",
     "postcss": "^8",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5"
+    "typescript": "^5",
+    "tsup": "^8.0.2"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "tailwindcss": "^3.0.0",
+    "next": "^13.0.0 || ^14.0.0 || ^15.0.0"
+  },
+  "keywords": [
+    "shadcn",
+    "ui",
+    "theme",
+    "government",
+    "enterprise",
+    "blue",
+    "tailwind",
+    "react",
+    "next.js"
+  ],
+  "author": "ClearGov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/cleargov-shadcn-theme"
   }
 }
