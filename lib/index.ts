@@ -6,4 +6,4 @@ export { default as tailwindConfig } from '../tailwind.config'
 export * from '../components/ui'
 
 // Re-export utilities
-export * from './utils' 
+export * from './utils'

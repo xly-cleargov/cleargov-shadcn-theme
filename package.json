@@ -1,6 +1,6 @@
 {
   "name": "@cleargov/shadcn-theme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A professional blue theme for shadcn/ui components, perfect for government and enterprise applications",
   "private": false,
   "main": "dist/index.js",

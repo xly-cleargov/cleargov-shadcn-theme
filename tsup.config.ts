@@ -3,7 +3,10 @@ import { defineConfig } from 'tsup'
 export default defineConfig({
   entry: ['lib/index.ts'],
   format: ['cjs', 'esm'],
-  dts: true,
+  dts: {
+    entry: './lib/index.ts',
+    resolve: true
+  },
   clean: true,
   external: [
     'react',
@@ -11,5 +14,8 @@ export default defineConfig({
     'next',
     'tailwindcss',
     '@radix-ui/*'
-  ]
+  ],
+  treeshake: true,
+  sourcemap: true,
+  tsconfig: './tsconfig.lib.json'
 }) 
